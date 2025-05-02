@@ -6,7 +6,7 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:01:26 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/01 17:16:32 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/02 04:37:31 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,9 @@ int		error_write_return(int error, int *return_error);
 long	ft_atoi(const char *nptr);
 int		ft_verif(int argc, char **argv, int *return_error);
 void	ft_sort(t_all_pile pile);
+void	pa(t_all_pile *pile);
+void	pb(t_all_pile *pile);
+void	ss(t_all_pile *pile);
+void	sa_sb(int *tab);
 
 #endif

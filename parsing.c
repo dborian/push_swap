@@ -6,7 +6,7 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 07:08:03 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/01 17:15:51 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/02 04:23:18 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ int	*put_in_tab(int argc, char **argv, int *return_error)
 			free(tab);
 			return(NULL);
 		}
-		printf("tab[%d] = %s\n", i, convert_to_bin(tab[i]));
-		printf("tab[%d] = %d\n", i, tab[i]);
 		tab[i++] = temp;
 	}
 	return (tab);
