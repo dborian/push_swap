@@ -6,7 +6,7 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:09:14 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/02 04:39:38 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/03 10:17:22 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,28 +32,12 @@ int	main(int argc, char **argv)
 		free(pile.a.pile);
 		return (error_write_return(1, &pile.error));
 	}
-	// sa_sb(&pile.a.pile[0]);
 	while (i < pile.a.count)
 	{
-		printf("tab1[%d] = %d\n", i, pile.a.pile[i]);
+		printf("tab[%d] = %d\n", i, pile.a.pile[i]);
 		i++;
 	}
-	printf("\n\n");
-	i = 0;
-	pb(&pile);
-	while (i < pile.a.count)
-	{
-		printf("tab2[%d] = %d\n", i, pile.a.pile[i]);
-		i++;
-	}
-	printf("\n\n");
-	i = 0;
-	pa(&pile);
-	while (i < pile.a.count)
-	{
-		printf("tab3[%d] = %d\n", i, pile.a.pile[i]);
-		i++;
-	}
+	ft_normalize(&pile.a);
 	free(pile.a.pile);
 	free(pile.b.pile);
 	return (0);

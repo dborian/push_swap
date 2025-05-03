@@ -6,7 +6,7 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:04:06 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/02 04:17:09 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/03 10:13:59 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,26 +41,6 @@ int	ft_picknum(int nb, int pos)
 	num = nb % 10;
 	return (num);
 }
-
-// char	*convert_to_bin(int nbr)
-// {  
-// 	int		tab[32];
-// 	char	hola[32];
-// 	int		i;
-// 	int		j;
-	
-// 	i = 0;
-// 	j = 0;
-// 	while (nbr > 0)  
-// 	{  
-// 		tab[i++] = nbr % 2;  
-// 		nbr = nbr / 2;  
-// 	}
-// 	i--;
-// 	while(i >= 0)  
-// 		hola[j++] = tab[i--] + 48;  
-// 	return (hola);
-// }
 
 long	ft_atoi(const char *nptr)
 {
