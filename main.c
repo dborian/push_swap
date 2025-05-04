@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:09:14 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/03 10:17:22 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/04 11:17:37 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,14 @@ int	main(int argc, char **argv)
 		printf("tab[%d] = %d\n", i, pile.a.pile[i]);
 		i++;
 	}
-	ft_normalize(&pile.a);
+	i = 0;
+	ft_normalize(&pile.a, &pile.error);
+	while (i < pile.a.count)
+	{
+		printf("tab[%d] = %d\n", i, pile.a.pile[i]);
+		i++;
+	}
 	free(pile.a.pile);
 	free(pile.b.pile);
-	return (0);
+	return (pile.error);
 }

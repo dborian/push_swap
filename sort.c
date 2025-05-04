@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 13:34:00 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/01 16:18:41 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/04 05:25:57 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_sort(t_all_pile pile)
-{
-	int	max_bit;
+// void ft_sort(t_all_pile pile)
+// {
+// 	int	max_bit;
 
-	max_bit = 
-}
+// 	max_bit = 
+// }

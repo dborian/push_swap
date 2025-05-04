@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:01:26 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/03 09:59:06 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/04 05:36:58 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ void	ra_rb(int *tab);
 void	rr(t_all_pile *pile);
 void	rra_rrb(int *tab);
 void	rrr(t_all_pile *pile);
-void	ft_normalize(int *tab);
+int		ft_normalize(t_pile *pile, int *error);
 
 #endif
