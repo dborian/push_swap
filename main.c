@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:09:14 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/05 05:01:02 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/06 00:43:01 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	main(int argc, char **argv)
 		return (error_write_return(1, &pile.error));
 	}
 	ft_normalize(&pile.a, &pile.error);
+	if (ft_no_double(&pile.a) != 0)
+		return (error_write_return(3, &pile.error));
 	ft_sort(&pile);
 	free(pile.a.pile);
 	free(pile.b.pile);

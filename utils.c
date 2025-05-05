@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:04:06 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/05 06:04:30 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/06 00:10:51 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,27 @@ int	ft_verif(int argc, char **argv, int *return_error)
 			if (!(argv[j][i++] <= '9' || argv[j][i++] >= '0'))
 				return (error_write_return(3, return_error));
 		}
+	}
+	return (0);
+}
+
+int	ft_no_double(t_pile *pile)
+{
+	int	i;
+	int	j;
+
+	j = 0;
+	i = 0;
+	while (j < pile->count)
+	{
+		while (i < pile->count)
+		{
+			if (pile->pile[j] == pile->pile[i] && j != i)
+				return (1);
+			i++;
+		}
+		i = 0;
+		j++;
 	}
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pa_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 01:06:46 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/05 09:23:09 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/06 00:00:51 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,17 @@ void pa(t_all_pile *pile, int *error)
 	free(tab);
 }
 
-void pb(t_all_pile *pile)
+void pb(t_all_pile *pile, int *error)
 {
-	int	tab[32];
+	int	*tab;
 	int	i;
 	int	j;
 
 	j = 0;
 	i = 0;
+	tab = malloc(sizeof(int) * pile->b.count);
+	if (!tab)
+		error_write_return(1, error);
 	while (i < pile->b.count)
 		tab[j++] = pile->b.pile[i++];
 	i = 1;
@@ -64,4 +67,5 @@ void pb(t_all_pile *pile)
 		pile->a.pile[j++] = pile->a.pile[i++];
 	}
 	pile->a.count--;
+	free(tab);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   normalize.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 09:57:56 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/04 11:39:30 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/06 00:43:37 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,5 @@ int	ft_normalize(t_pile *pile, int *error)
 		j = -1;
 	}
 	free(tab);
+	return (0);
 }

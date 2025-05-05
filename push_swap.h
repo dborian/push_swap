@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:01:26 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/05 05:00:33 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/06 00:41:30 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ int		error_write_return(int error, int *return_error);
 long	ft_atoi(const char *nptr);
 int		ft_verif(int argc, char **argv, int *return_error);
 void	ft_sort(t_all_pile *pile);
-void	pa(t_all_pile *pile);
-void	pb(t_all_pile *pile);
+void	pa(t_all_pile *pile, int *error);
+void	pb(t_all_pile *pile, int *error);
 void	ss(t_all_pile *pile);
 void	sa_sb(int *tab);
 void	ra_rb(int *tab);
@@ -47,5 +47,6 @@ void	rr(t_all_pile *pile);
 void	rra_rrb(int *tab);
 void	rrr(t_all_pile *pile);
 int		ft_normalize(t_pile *pile, int *error);
+int		ft_no_double(t_pile *pile);
 
 #endif
