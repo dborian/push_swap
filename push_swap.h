@@ -6,7 +6,7 @@
 /*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:01:26 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/04 05:36:58 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/05 05:00:33 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int		*put_in_tab(int argc, char **argv, int *return_error);
 int		error_write_return(int error, int *return_error);
 long	ft_atoi(const char *nptr);
 int		ft_verif(int argc, char **argv, int *return_error);
-void	ft_sort(t_all_pile pile);
+void	ft_sort(t_all_pile *pile);
 void	pa(t_all_pile *pile);
 void	pb(t_all_pile *pile);
 void	ss(t_all_pile *pile);

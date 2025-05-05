@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dedme <dedme@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:04:06 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/03 10:13:59 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/05 06:04:30 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,21 +25,6 @@ int	ft_numlen(int nb)
 		len++;
 	}
 	return (len);
-}
-
-int	ft_picknum(int nb, int pos)
-{
-	int	num;
-	int	i;
-
-	i = 0;
-	num = 0;
-	if (pos == 0)
-		return (0);
-	while (i < pos - 1)
-		nb = nb / 10 + (i++ *0);
-	num = nb % 10;
-	return (num);
 }
 
 long	ft_atoi(const char *nptr)
