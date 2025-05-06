@@ -6,7 +6,7 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:04:06 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/06 00:10:51 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/06 10:22:24 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,12 @@ long	ft_atoi(const char *nptr)
 	int		i;
 	long	nb;
 	int		v;
+	int		f;
 
 	v = 1;
 	nb = 0;
 	i = 0;
+	f = 0;
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || (nptr[i] == 32))
 		i++;
 	if (nptr[i] == '-')
@@ -45,8 +47,9 @@ long	ft_atoi(const char *nptr)
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		nb = nb * 10 + (nptr[i++] - 48);
+		f = 1;
 	}
-	if (!(nptr[i] >= '0' && nptr[i] <= '9') && nptr[i] != 0)
+	if ((!(nptr[i] >= '0' && nptr[i] <= '9') && nptr[i] != 0) || f == 0)
 		return (2147483648);
 	return (nb * v);
 }

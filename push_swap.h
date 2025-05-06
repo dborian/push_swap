@@ -6,16 +6,16 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:01:26 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/06 07:30:26 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/06 10:27:04 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
 
 typedef struct s_pile
 {
@@ -32,7 +32,6 @@ typedef struct s_all_pile
 
 char	*convert_to_bin(int nbr);
 int		ft_numlen(int nb);
-int		ft_picknum(int nb, int pos);
 int		*put_in_tab(int argc, char **argv, int *return_error);
 int		error_write_return(int error, int *return_error);
 long	ft_atoi(const char *nptr);
@@ -42,11 +41,13 @@ void	pa(t_all_pile *pile);
 void	pb(t_all_pile *pile);
 void	ss(t_all_pile *pile);
 void	sa_sb(int *tab);
-void	ra_rb(t_pile *pile);
+void	ra(t_pile *pile);
+void	rb(t_pile *pile);
 void	rr(t_all_pile *pile);
 void	rra_rrb(int *tab);
 void	rrr(t_all_pile *pile);
 int		ft_normalize(t_pile *pile, int *error);
 int		ft_no_double(t_pile *pile);
+int		ft_is_sorted(t_pile *pile);
 
 #endif

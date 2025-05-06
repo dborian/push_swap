@@ -1,42 +1,39 @@
-.PHONY: all clean fclean re
+CC = cc
+CFLAGS = -Werror -Wextra -Wall -g3
 
-OBJ_DIR		= .objects
-INC_DIR		= headers
+NAME = push_swap
 
-LST_SRCS	=	main.c \
-				normalize.c \
-				parsing.c \
-				sort.c \
-				utils.c \
-				error.c \
-				move/pa_pb.c \
-				move/ra_rb_rr.c \
-				move/sa_sb_ss.c \
-				move/ rra_rrb_rrr.c
-LST_INCS	=	push_swap.h
-LST_OBJS	=	$(LST_SRCS:.c=.o)
+SRC = \
+	main.c \
+	error.c \
+	normalize.c \
+	parsing.c \
+	sort.c \
+	utils.c \
+	move/pa_pb.c \
+	move/ra_rb_rr.c \
+	move/rra_rrb_rrr.c \
+	move/sa_sb_ss.c \
+	check_sorted.c
 
-INCS		=	$(addprefix $(INC_DIR)/, $(LST_INCS))
-OBJS		=	$(addprefix $(OBJ_DIR)/, $(LST_OBJS))
-
-CC 			=	cc
-NAME		=	push_swap
-FLAGS 		=	-Wall -Wextra -Werror -g3
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INCS)
-	@mkdir -p $(OBJ_DIR)
-	$(CC) $(FLAGS) -I$(INC_DIR) -I$(LIBFT_DIR)/headers -c $< -o $@
+$(NAME): $(OBJ) Makefile
+	@echo "\033[32m scrs compiled \033[0m"
+	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	@echo "\033[32m $(NAME) created \033[0m"
 
-$(NAME):	$(LIBFT) $(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+%.o: %.c push_swap.h
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ_DIR) 
-	make clean -C $(LIBFT_DIR)
+	@rm -f $(OBJ)
+	@echo "\033[0;31m objs removed \033[0m"
 
 fclean: clean
-	rm -f $(NAME) $(LIBFT)
+	@rm -f $(NAME)
+	@echo "\033[0;31m $(NAME) removed \033[0m"
 
 re: fclean all
