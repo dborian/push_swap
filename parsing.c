@@ -6,13 +6,13 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 07:08:03 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/02 04:23:18 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/06 07:13:17 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	*put_in_tab(int argc, char **argv, int *return_error)
+int	*	put_in_tab(int argc, char **argv, int *return_error)
 {
 	int		*tab;
 	long	temp;
