@@ -6,7 +6,7 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:01:26 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/06 10:27:04 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/07 05:12:34 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_all_pile
 {
 	t_pile	a;
 	t_pile	b;
+	int		len;
 	int		error;
 }				t_all_pile;
 
@@ -49,5 +50,10 @@ void	rrr(t_all_pile *pile);
 int		ft_normalize(t_pile *pile, int *error);
 int		ft_no_double(t_pile *pile);
 int		ft_is_sorted(t_pile *pile);
+void	ft_sort_five(t_all_pile *pile);
+void	ft_push_min_to_b(t_all_pile *pile);
+int		ft_find_pos(t_pile *pile, int val);
+int		ft_find_min(t_pile *pile);
+void	ft_sort_three(t_all_pile *pile);
 
 #endif

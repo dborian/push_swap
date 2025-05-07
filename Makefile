@@ -14,7 +14,8 @@ SRC = \
 	move/ra_rb_rr.c \
 	move/rra_rrb_rrr.c \
 	move/sa_sb_ss.c \
-	check_sorted.c
+	check_sorted.c \
+	sort_exception.c
 
 OBJ = $(SRC:.c=.o)
 

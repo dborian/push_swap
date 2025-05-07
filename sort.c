@@ -6,7 +6,7 @@
 /*   By: dedme <dedme@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 13:34:00 by dedme             #+#    #+#             */
-/*   Updated: 2025/05/06 09:20:16 by dedme            ###   ########.fr       */
+/*   Updated: 2025/05/07 05:22:57 by dedme            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,22 +53,43 @@ int	ft_count_bits(int nb)
 	return (bits);
 }
 
+int	ft_exception(t_all_pile *pile)
+{
+	if (pile->a.count == 3)
+	{
+		ft_sort_three(&*pile);
+		return (1);
+	}
+	else if (pile->a.count == 2)
+	{
+		write(1, "ra\n", 3);
+		return (1);
+	}
+	else if (pile->a.count == 5)
+	{
+		ft_sort_five(&*pile);
+		return (1);
+	}
+	return (0);
+}
+
 void	ft_sort(t_all_pile *pile)
 {
 	int	i;
 	int	j;
 	int	best;
 	int	len;
-	int	t_len;
 
+	if (ft_exception(&*pile) == 1)
+		return ;
 	i = 0;
-	j = 1;
-	t_len = pile->a.count;
+	j = 0;
+	pile->len = pile->a.count;
 	best = ft_find_better(&pile->a);
 	len = ft_count_bits(best)+1;
-	while (j < len)
+	while (++j < len)
 	{
-		while (++i < t_len)
+		while (++i < pile->len)
 		{
 			if (ft_pick_bin(pile->a.pile[0], j) == 1)
 				ra(&pile->a);
@@ -77,7 +98,6 @@ void	ft_sort(t_all_pile *pile)
 		}
 		while (pile->b.count > 0)
 			pa(&*pile);
-		j++;
 		i = -1;
 	}
 }
